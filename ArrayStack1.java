@@ -6,6 +6,8 @@ public class ArrayStack1 {
     private int top2;
     
     public ArrayStack1(int capacity) {
+        if(capacity <= 0)
+            throw new IllegalArgumentException("Capacity must be 1 or greater");
         items = new int[capacity];
         this.top1 = -1;
         this.top2 = capacity;
@@ -13,12 +15,13 @@ public class ArrayStack1 {
 
     public void push1(int item){
         if(isFull1())
-            System.out.println("Capacity must 1 or greater");
-        items[++top1] = item; 
-    }
-
+            throw new IllegalStateException();
+            items[++top1] = item; 
+        }
+        
     public void push2(int item){
-        if(isFull2())
+         if(isFull2())
+            throw new IllegalStateException();
             System.out.println("Capacity must 1 or greater");
         items[--top2] = item;
     }

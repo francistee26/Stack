@@ -1,6 +1,6 @@
 public class ArrayStM {
     public static void main(String[] args) {
-        ArrayStack1 arrayS = new ArrayStack1(4);
+        ArrayStack1 arrayS = new ArrayStack1(0);
         
         arrayS.push1(10); 
         arrayS.pop1();
